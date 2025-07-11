@@ -11,6 +11,9 @@ import Plane from '../models/Plane';
       </div>*/}
 
 const Home = () => {
+  const [currentStage, setCurrentStage] = useState(1);
+
+
   const [isRotating, setIsRotating] = useState(false);
   
   const adjustIslandForScreenSize = () => {
@@ -49,8 +52,8 @@ const Home = () => {
     <section className='w-full h-screen relative'>
       
       <Canvas 
-      className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
-      camera={{near: 0.1, far: 1000}}     //object nearer than 0.1 and farther from 1000 from camera won't be rendered
+        className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+        camera={{near: 0.1, far: 1000}}     //object nearer than 0.1 and farther from 1000 from camera won't be rendered
       > 
         <Suspense fallback={<Loader />}>
         <directionalLight
@@ -70,11 +73,13 @@ const Home = () => {
         <Sky />
 
         <Island 
+          isRotating = {isRotating}
+          setIsRotating = {setIsRotating}
+          setCurrentStage={setCurrentStage}
           position = {islandPosition}
           scale = {islandScale}
           rotation = {islandRotation}
-          isRotating = {isRotating}
-          setIsRotating = {setIsRotating}
+          
         />
 
         <Plane 
