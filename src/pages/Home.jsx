@@ -4,6 +4,8 @@ import { Suspense } from 'react';
 import Loader from '../components/Loader';
 import Island from '../models/Island';
 import Sky from '../models/Sky';
+import Bird from '../models/Bird';
+import Plane from '../models/Plane';
 {/*<div className='absolute top-28 left-0 right-0 z-0 flex items-center justify-center'>
         popup
       </div>*/}
@@ -47,6 +49,7 @@ const Home = () => {
           intensity={1}
         />
 
+        <Bird />
         <Sky />
 
         <Island 
@@ -54,6 +57,8 @@ const Home = () => {
           scale = {islandScale}
           rotation = {islandRotation}
         />
+
+        <Plane />
         </Suspense>
       </Canvas>
 
