@@ -37,10 +37,14 @@ const Home = () => {
           position={[1, 1, 1]}
           intensity={2}        
         />
-        <ambientLight />
+        <ambientLight intensity={0.5} />
         <pointLight />
         <spotLight />
-        <hemisphereLight />
+        <hemisphereLight 
+          skyColor="#b1e1ff"
+          groundColor={"#000000"}
+          intensity={1}
+        />
 
         <Island 
           position = {islandPosition}
@@ -61,3 +65,7 @@ export default Home
 
 //suspense is used as a wrapper and used for rendering loading screen
 //directional light -  simulates the light coming from a distant source, like sun
+//ambient light - illuminates all object in the scene equally, without casting shadows
+//point light - emits lights in all direction from a single point
+//spotlight - similar to point light, in a sense it emits light from a one direction, in a shape of a cone
+//hemispherelight - iluminates the scene with a gradient
