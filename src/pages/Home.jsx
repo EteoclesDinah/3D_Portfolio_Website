@@ -1,8 +1,9 @@
-import React from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Suspense } from 'react'
-import Loader from '../components/Loader'
-import Island from '../models/Island'
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
+import Loader from '../components/Loader';
+import Island from '../models/Island';
+import Sky from '../models/Sky';
 {/*<div className='absolute top-28 left-0 right-0 z-0 flex items-center justify-center'>
         popup
       </div>*/}
@@ -46,6 +47,8 @@ const Home = () => {
           intensity={1}
         />
 
+        <Sky />
+
         <Island 
           position = {islandPosition}
           scale = {islandScale}
@@ -69,3 +72,5 @@ export default Home
 //point light - emits lights in all direction from a single point
 //spotlight - similar to point light, in a sense it emits light from a one direction, in a shape of a cone
 //hemispherelight - iluminates the scene with a gradient
+//Island is not a primitive element, as it contains lots of meshes, but our sky is gonna be primitive.
+//no use of regular cloud image, because as we gonna rotate through the scene, clouds are gonna rotate too, giving 3d feels
