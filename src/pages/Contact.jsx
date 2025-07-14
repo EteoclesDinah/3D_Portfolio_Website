@@ -89,7 +89,7 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
       
       <div className='flex-1 min-w-[50%] flex flex-col'>
-        <h1 className='sm:text-5xl text-4xl font-semibold sm:leading-snug'> Get In Touch.</h1>
+        <h1 className='head-text'> Get In Touch.</h1>
 
         <form
           className='w-full flex flex-col gap-7 mt-14'
@@ -129,7 +129,7 @@ const Contact = () => {
             Your Message
             <textarea 
               name='message'
-              rows={4}
+              rows={3}
               className='textarea'
               placeholder='Let me know how I can help you!'
               required
