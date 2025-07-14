@@ -6,9 +6,7 @@ import Island from '../models/Island';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
 import Plane from '../models/Plane';
-{/*<div className='absolute top-28 left-0 right-0 z-0 flex items-center justify-center'>
-        popup
-      </div>*/}
+import HomeInfo from '../components/HomeInfo';
 
 const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
@@ -51,6 +49,10 @@ const Home = () => {
   return (
     <section className='w-full h-screen relative'>
       
+      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+        {currentStage && <HomeInfo currentStage={currentStage} />}
+      </div>
+
       <Canvas 
         className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
         camera={{near: 0.1, far: 1000}}     //object nearer than 0.1 and farther from 1000 from camera won't be rendered
