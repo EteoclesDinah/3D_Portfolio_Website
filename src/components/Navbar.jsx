@@ -7,13 +7,11 @@ const Navbar = () => {
 
     <NavLink
       to="/"
-      className="w-18 h-18 object-contain"
+      className="w-12 h-12 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
     >
       <p className="blue-gradient_text">KRD</p>
 
     </NavLink>
-
-
   
     <nav className="flex gap-7 text-lg font-medium">
       <NavLink
@@ -22,6 +20,7 @@ const Navbar = () => {
       >
         About
       </NavLink>
+
       <NavLink
         to="/projects"
         className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}
