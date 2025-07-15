@@ -286,3 +286,42 @@ ul.timeline-points {
   list-style-type: disc !important;
   padding-left: 1.25rem; /* Ensures bullet spacing */
 }
+
+
+
+.cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem; /* mt-8 */
+
+  gap: 1.75rem; /* gap-7 */
+}
+
+@media (min-width: 768px) {
+  .cta {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 640px) {
+  .cta {
+    margin-top: 4rem; /* sm:mt-16 */
+  }
+}
+
+.cta-text {
+  color: #6b7280; /* Assuming 'text-black-500' corresponds to a gray shade like Tailwind's gray-500 */
+  font-weight: 800; /* font-extrabold */
+  flex: 1;
+  font-size: 1.875rem; /* text-3xl = 30px */
+  line-height: 2.25rem; /* line-height for text-3xl */
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .cta-text {
+    text-align: center; /* max-md:text-center */
+  }
+}
