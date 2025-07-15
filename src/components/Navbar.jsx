@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <header className="relative flex items-center justify-between bg-white p-4 shadow">
+    <header className="header">
 
     <NavLink
       to="/"
-      className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
+      className="w-18 h-18 object-contain"
     >
       <p className="blue-gradient_text">KRD</p>
 
