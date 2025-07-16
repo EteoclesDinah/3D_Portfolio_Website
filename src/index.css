@@ -50,6 +50,33 @@ body:has(.card[data-color="green"]:hover) {
   }
 }
 
+.footer {
+  max-width: 64rem; /* max-w-5xl = 1024px */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto;
+  padding-left: 2rem; /* px-8 = 32px */
+  padding-right: 2rem;
+  padding-bottom: 1.5rem; /* pb-6 = 24px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem; /* gap-7 = 28px */
+}
+
+@media (min-width: 640px) { /* sm breakpoint = 640px */
+  .footer {
+    padding-left: 4rem; /* sm:px-16 = 64px */
+    padding-right: 4rem;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem; /* gap-7 = 28px */
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .blue-gradient_text {
   background-image: linear-gradient(to right, #00c6ff, #0072ff);
