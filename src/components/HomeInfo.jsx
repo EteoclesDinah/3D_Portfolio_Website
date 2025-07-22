@@ -6,7 +6,7 @@ const InfoBox = ({ text, link, btnText }) => (
   <div className='mx-auto flex flex-col items-center w-full max-w-xl'>
     
     {/* Blue Card */}
-    <div className='w-full text-white text-center neo-brutalism-blue rounded-lg'>
+    <div className='w-full text-black/70 text-center rounded-lg font-worksans font-semibold -mt-16'>
       <p className='sm:text-xl sm:leading-snug'>
         {text}
       </p>
@@ -15,7 +15,7 @@ const InfoBox = ({ text, link, btnText }) => (
     {/* White Button */}
     <Link
       to={link}
-      className='neo-brutalism-white rounded-lg text-center font-semibold flex items-center gap-2 button-overlap'
+      className='neo-brutalism-white rounded-lg text-center font-semibold flex items-center gap-2 button-overlap px-3 py-0.5'
     >
       {btnText}
       <img src={arrow} alt="arrow" className='w-4 h-4 object-contain' />
@@ -28,8 +28,8 @@ const InfoBox = ({ text, link, btnText }) => (
 
 const renderContent = {
     1: (
-        <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue1 py-4 px-8 text-white mx-5'>
-            Hi, I am <span className='font-semibold'>Kamala </span> 👋
+        <h1 className='sm:text-xl sm:leading-snug text-center py-4 px-8 text-black mx-5 -mt-10 font-serif'>
+            Hi, I am <span className='font-bold'>Kamala </span> 👋
             <br />
             A Computer Science Student from Nepal.
         </h1>
