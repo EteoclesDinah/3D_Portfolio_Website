@@ -1,17 +1,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+ 
+
+// ✅ No need to import tailwindcss or postcss here
 
 // https://vite.dev/config/
 export default defineConfig({
+
   //for loading assets
   base: './',    
   
   plugins: [
     react(),
-    tailwindcss(),
   ],
 
-  assetsInclude: ['**/*.glb']
+  assetsInclude: ['**/*.glb'],
+
+   // ✅ Tailwind is handled automatically via PostCSS
   
 })

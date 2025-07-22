@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-
-@import "tailwindcss";
-@import "tailwindcss/preflight";
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 :root {
-    --blue-rgb: 237 245 255;
-    --green-rgb: 125 161 25;
+  --blue-rgb: 237 245 255;
+  --green-rgb: 125 161 35;
 }
 
 body {
@@ -22,249 +21,87 @@ body:has(.card[data-color="green"]:hover) {
   background-color: rgb(var(--green-rgb) / 25%);
 }
 
+@layer utilities {
 
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2rem;   /* px-8 */
-  padding-right: 2rem;
-  padding-top: 1rem;    /* py-4 */
-  padding-bottom: 1rem;
-  max-width: 64rem;     /* max-w-5xl = 1024px */
-  margin-left: auto;    /* mx-auto */
-  margin-right: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  z-index: 10;
-}
-
-@media (min-width: 640px) {
-  .header {
-    padding-left: 4rem;   /* sm:px-16 = 64px */
-    padding-right: 4rem;
+  @layer utilities {
+  .shadow-card {
+    /* Your custom box-shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
 
-.footer {
-  max-width: 64rem; /* max-w-5xl = 1024px */
-  margin-left: auto; /* mx-auto */
-  margin-right: auto;
-  padding-left: 2rem; /* px-8 = 32px */
-  padding-right: 2rem;
-  padding-bottom: 1.5rem; /* pb-6 = 24px */
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem; /* gap-7 = 28px */
-}
 
-@media (min-width: 640px) { /* sm breakpoint = 640px */
-  .footer {
-    padding-left: 4rem; /* sm:px-16 = 64px */
-    padding-right: 4rem;
-  }
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.75rem; /* gap-7 = 28px */
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-.blue-gradient_text {
-  background-image: linear-gradient(to right, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent; /* For Safari */
-}
-
-
-
-/* Neo Brutalism */
-.neo-brutalism-blue {
-  background: #2b77e7;
-  position: relative;
-  border-radius: 10px;
-  border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 3rem;
-  padding-right: 1rem;
-}
-
-.neo-brutalism-white {
-  background: #fff;
-  border: #fff;
-  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
-    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
-
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.button-overlap {
-  z-index: 10;
-  margin-top: -1.5rem;
-}
-
-.neo-brutalism-blue1 {
-  background: #2b77e7;
-  position: relative;
-  border-radius: 10px;
-  border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
-}
-
-/* Contact */
-
-.max-container {
-  max-width: 64rem; /* max-w-5xl = 1024px = 64rem */
-  margin-left: auto; /* mx-auto */
-  margin-right: auto;
-  padding-bottom: 1rem; /* pb-12 = 48px = 3rem */
-  padding-left: 2rem; /* px-8 = 32px = 2rem */
-  padding-right: 2rem;
-  padding-top: 15px; /* !pt-[126px] */
-  min-height: calc(100vh - 80px); /* min-h-[calc(100vh-80px)] */
-
-  /* For small screens and up (sm): padding: 4rem (16) */
-}
-
-/* Add responsive styles using a media query */
-@media (min-width: 640px) {
   .max-container {
-    padding: 4rem; /* sm:p-16 = 64px = 4rem */
-    padding-top: 126px; /* ensure custom pt still applies */
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
-}
 
-
-
-.head-text {
-  font-size: 1.875rem; /* text-3xl = 30px */
-  font-weight: 600;    /* font-semibold */
-  line-height: 2.25rem; /* default line height for text-3xl */
-  font-family: 'Poppins', sans-serif; /* font-poppins */
-}
-
-/* Responsive styles for small screens and up (sm) */
-@media (min-width: 640px) {
   .head-text {
-    font-size: 3rem; /* text-5xl = 48px */
-    line-height: 1.2; /* leading-snug = ~1.375 normally, but can be 1.2 for snug */
+    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
   }
-}
 
-
-.input {
-  background-color: #ffffff; /* bg-white */
-  border: 1px solid #e5e7eb; /* border + border-gray-200 */
-  color: #111827; /* text-gray-900 */
-  font-size: 0.875rem; /* text-sm = 14px */
-  border-radius: 0.5rem; /* rounded-lg = 8px */
-  width: 100%; /* w-full */
-  padding: 0.625rem; /* p-2.5 = 10px */
-  margin-top: 0.5rem; /* mt-2.5 = 10px */
-  font-weight: 400; /* font-normal */
-  display: block; /* block */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.025); /* shadow-card (custom class) */
-}
-
-/* Focus state styles */
-.input:focus {
-  outline: none;
-  border-color: #3b82f6; /* focus:border-blue-500 */
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* focus:ring-blue-500 */
-}
-
-
-.textarea {
-  display: block; /* block */
-  padding: 0.625rem; /* p-2.5 = 10px */
-  width: 100%; /* w-full */
-  font-size: 0.875rem; /* text-sm = 14px */
-  color: #111827; /* text-gray-900 */
-  background-color: #ffffff; /* bg-white */
-  border-radius: 0.5rem; /* rounded-lg = 8px */
-  border: 1px solid #e5e7eb; /* border + border-gray-200 */
-  margin-top: 0.5rem; /* mt-2.5 = 10px */
-  font-weight: 400; /* font-normal */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.025); /* shadow-card (custom) */
-}
-
-/* Focus state */
-.textarea:focus {
-  outline: none;
-  border-color: #3b82f6; /* focus:border-blue-500 */
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* focus:ring-blue-500 */
-}
-
-
-.btn {
-  color: #ffffff; /* text-white */
-  background-image: linear-gradient(to right, #00c6ff, #0072ff); /* bg-gradient-to-r from-[#00c6ff] to-[#0072ff] */
-  font-weight: 500; /* font-medium */
-  border-radius: 0.5rem; /* rounded-lg = 8px */
-  font-size: 0.875rem; /* text-sm = 14px */
-  width: 100%; /* w-full */
-  padding: 0.625rem 1.25rem; /* py-2.5 px-5 = 10px 20px */
-  text-align: center; /* text-center */
-  outline: none; /* focus:outline-none */
-  display: inline-block; /* for layout consistency */
-  cursor: pointer;
- 
-}
-
-/* Responsive width: sm:w-auto (min-width: 640px) */
-@media (min-width: 640px) {
-  .btn {
-    width: auto;
-  }
-}
-
-/* Focus state */
-.btn:focus {
-  box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.5); /* focus:ring-4 + focus:ring-blue-300 */
-  outline: none;
-}
-
-
-
-
-.subhead-text {
-  font-weight: 600; /* font-semibold */
-  font-size: 1.25rem; /* text-xl */
-  position: relative; /* relative */
-  font-family: 'Poppins', sans-serif; /* font-poppins */ 
-  margin-top: 20px;
-}
-
-/* For small screens and above (sm:text-3xl) */
-@media (min-width: 640px) {
   .subhead-text {
-    font-size: 1.875rem; /* text-3xl */
+    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+  }
+
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  }
+
+  .input {
+    @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+  }
+
+  .textarea {
+    @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+  }
+
+  .btn {
+    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+  }
+
+  .header {
+    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+  }
+
+  .footer {
+    @apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+  }
+
+  .footer-container {
+    @apply flex flex-wrap gap-7 items-center justify-between;
+  }
+
+  .info-box {
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+  }
+
+  .neo-btn {
+    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+  }
+
+  .cta {
+    @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
+  }
+
+  .cta-text {
+    @apply text-black font-extrabold flex-1 text-3xl max-md:text-center;
   }
 }
 
+.glassmorphism {
+  background: rgba(8, 116, 239, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
-/*used in about page*/
+.logo {
+  border-radius: 8.889px;
+  background: #fff;
+  box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
+    0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
+}
 
 .block-container {
   position: relative;
@@ -337,48 +174,19 @@ body:has(.card[data-color="green"]:hover) {
   transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
 }
 
-
-/* about */
-ul.timeline-points {
-  list-style-type: disc !important;
-  padding-left: 1.25rem; /* Ensures bullet spacing */
+/* Neo Brutalism */
+.neo-brutalism-blue {
+  background: #2b77e7;
+  position: relative;
+  border-radius: 10px;
+  border: #2b77e7;
+  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
 }
 
-
-
-.cta {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2rem; /* mt-8 */
-
-  gap: 1.75rem; /* gap-7 */
-}
-
-@media (min-width: 768px) {
-  .cta {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 640px) {
-  .cta {
-    margin-top: 4rem; /* sm:mt-16 */
-  }
-}
-
-.cta-text {
-  color: #6b7280; /* Assuming 'text-black-500' corresponds to a gray shade like Tailwind's gray-500 */
-  font-weight: 800; /* font-extrabold */
-  flex: 1;
-  font-size: 1.875rem; /* text-3xl = 30px */
-  line-height: 2.25rem; /* line-height for text-3xl */
-  text-align: left;
-}
-
-@media (max-width: 767px) {
-  .cta-text {
-    text-align: center; /* max-md:text-center */
-  }
+.neo-brutalism-white {
+  background: #fff;
+  border: #fff;
+  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
