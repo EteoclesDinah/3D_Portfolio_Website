@@ -55,11 +55,11 @@ const renderContent = {
             btnText="Let's talk."
         />
     )
-}
+};
 
 
 const HomeInfo = ({ currentStage }) => {
   return renderContent[currentStage] || null;
-}
+};
 
-export default HomeInfo
+export default HomeInfo;

@@ -15,7 +15,7 @@ const CTA = () => {
             Contact
         </Link>
     </section>
-  )
-}
+  );
+};
 
-export default CTA
+export default CTA;
