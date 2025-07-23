@@ -49,6 +49,7 @@ const Home = () => {
   const adjustPlaneForScreenSize = () => {
     let screenScale, screenPosition;
 
+    //If screen width is less tha 780px, adjust scale and position
     if(window.innerWidth < 768 ) {
       screenScale = [1.5, 1.5, 1.5];
       screenPosition = [0, -1.5, 0];
