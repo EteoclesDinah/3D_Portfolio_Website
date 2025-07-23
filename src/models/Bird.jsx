@@ -3,10 +3,18 @@ import { useAnimations, useGLTF } from '@react-three/drei';
 import birdScene from '../assets/3d/bird.glb';
 import { useFrame } from '@react-three/fiber';
 
+// 3D Model from: https://sketchfab.com/3d-models/phoenix-bird-844ba0cf144a413ea92c779f18912042
 const Bird = () => {
   const birdRef = useRef();
+
+  //Load the 3D model and animations from the provied GLT file
   const { scene, animations } = useGLTF(birdScene);
+
+  //Get access to the animations for the bird
   const { actions } = useAnimations(animations, birdRef);
+
+  //Play the "Take 001" animation when the component mounts
+  // Note: Animation names can be found on the Sketchfab website where the 3D model is hosted.
   useEffect(() => {
     actions['Take 001'].play();
   }, []);
@@ -41,14 +49,19 @@ const Bird = () => {
   })
 
   return (
+    //mesh, to create and display 3D objects
     <mesh 
       position={[-5, 2, 1]} 
       scale={[0.003, 0.003, 0.003]}
       ref={birdRef}
       >
+        
         <primitive object={scene}/>
     </mesh>
-  )
-}
 
-export default Bird
+    //Use the primitive element when you want to directly embed a complex 3D model or scene
+  );
+
+};
+
+export default Bird;
