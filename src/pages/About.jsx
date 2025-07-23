@@ -104,7 +104,7 @@ const About = () => {
 
       <CTA />
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

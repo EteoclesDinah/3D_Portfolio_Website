@@ -125,10 +125,10 @@ const Home = () => {
       </div>
     </section>
     
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
 
 //suspense is used as a wrapper and used for rendering loading screen

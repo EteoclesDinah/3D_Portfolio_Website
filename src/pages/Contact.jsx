@@ -179,7 +179,7 @@ const Contact = () => {
 
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

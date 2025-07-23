@@ -69,7 +69,7 @@ const Projects = () => {
 
       <CTA />
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
