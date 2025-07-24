@@ -13,7 +13,7 @@ import { a } from '@react-spring/three';   //to enable animation
 
 import islandScene from '../assets/3d/island.glb';
 
-const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
+const Island = ({isPaused, isRotating, setIsRotating, setCurrentStage, ...props}) => {
   const islandRef = useRef();
 
   //Get access to the Three.js render and viewport
@@ -161,22 +161,26 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     //base continuous rotation speed for continuous rotation of island even when there is no drag/swipe/arrow key interaction 
     const baseSpeed = -0.0015;
 
-    //Always rotate slowly
-    islandRef.current.rotation.y += baseSpeed;
+    
 
-    //If not rotating, apply damping to slow down the rotation (smoothly)
-    if(!isRotating) {
-      //Apply damping factor
-      rotationSpeed.current *= dampingFactor;
+    if (!isPaused) {
+      //Always rotate slowly
+      islandRef.current.rotation.y += baseSpeed;
 
-      //Stop rotation when speed is very small
-      if(Math.abs(rotationSpeed.current) < 0.001) {
-        rotationSpeed.current = 0;
+      //If not rotating, apply damping to slow down the rotation (smoothly)
+      if(!isRotating) {
+        //Apply damping factor
+        rotationSpeed.current *= dampingFactor;
+
+        //Stop rotation when speed is very small
+        if(Math.abs(rotationSpeed.current) < 0.001) {
+          rotationSpeed.current = 0;
+        }
       }
-    }
 
-    //Apply user rotation speed on top of the base speed
-    islandRef.current.rotation.y += rotationSpeed.current;
+       //Apply user rotation speed on top of the base speed
+      islandRef.current.rotation.y += rotationSpeed.current;
+    }
 
       //When rotating, determine the current stage based on island's orientation
       const rotation = islandRef.current.rotation.y;
