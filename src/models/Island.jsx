@@ -174,7 +174,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
       }
 
       islandRef.current.rotation.y += rotationSpeed.current;
-    } else {
+    }
 
       //When rotating, determine the current stage based on island's orientation
       const rotation = islandRef.current.rotation.y;
@@ -216,7 +216,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
         default:
           setCurrentStage(null);
       }
-    }
+    
   });
 
   
