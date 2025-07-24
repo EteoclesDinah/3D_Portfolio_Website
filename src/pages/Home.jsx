@@ -65,23 +65,6 @@ const Home = () => {
 
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
-    //for pausing the plane and island when it reaches 4 stages
-  const [isPaused, setIsPaused] = useState(false);
-console.log('isPaused', isPaused)
-  //pauses whenever a new stage is reached and resumes after 4 seconds
-  useEffect(() => {
-    let timeout;
-    if ([1, 2, 3, 4].includes(currentStage)) {
-      setIsPaused(true);
-
-      timeout = setTimeout(() => {
-        setIsPaused(false);
-      }, 4000);  //pause for 4 seconds
-    }
-
-    return () => clearTimeout(timeout);
-  }, [currentStage]);
-
   return (
     <section className='w-full h-screen relative'>
       
@@ -113,7 +96,7 @@ console.log('isPaused', isPaused)
         />
 
         <Island 
-          isRotating = {!isPaused}
+          isRotating = {isRotating}
           setIsRotating = {setIsRotating}
           setCurrentStage={setCurrentStage}
           position = {islandPosition}
@@ -123,8 +106,7 @@ console.log('isPaused', isPaused)
         />
 
         <Plane 
-          isPaused = {isPaused}
-          //isRotating = {isRotating}
+          isRotating = {isRotating}
           scale = {planeScale}
           position = {planePosition}
           rotation = {[0, 20, 0]}
