@@ -157,6 +157,13 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
 
   //This function is called on each frame update
   useFrame(() => {
+
+    //base continuous rotation speed for continuous rotation of island even when there is no drag/swipe/arrow key interaction 
+    const baseSpeed = -0.0015;
+
+    //Always rotate slowly
+    islandRef.current.rotation.y += baseSpeed;
+
     //If not rotating, apply damping to slow down the rotation (smoothly)
     if(!isRotating) {
       //Apply damping factor
@@ -166,9 +173,11 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
       if(Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0;
       }
+    }
 
-      islandRef.current.rotation.y += rotationSpeed.current;
-    } else {
+    //Apply user rotation speed on top of the base speed
+    islandRef.current.rotation.y += rotationSpeed.current;
+
       //When rotating, determine the current stage based on island's orientation
       const rotation = islandRef.current.rotation.y;
 
@@ -209,7 +218,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
         default:
           setCurrentStage(null);
       }
-    }
+    
   });
 
   

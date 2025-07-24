@@ -7,7 +7,8 @@ import CTA from '../components/CTA';
 const About = () => {
   return (
     <section className='max-container'> 
-      <h1 className='head-text'>Hello, I am <span className='blue-gradient_text font-semibold drop-shadow'>Kamala</span>
+      <h1 className='head-text'>
+        Hello, I am <span className='blue-gradient_text font-semibold drop-shadow'>Kamala</span>
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
@@ -22,7 +23,7 @@ const About = () => {
 
         <div className='mt-16 flex flex-wrap gap-12'>
           {skills.map((skill) => (
-            <div className='block-container w-20 h-20'>
+            <div className='block-container w-20 h-20' key={skill.name}>
               <div className='btn-back rounded-xl'/>
               <div className='btn-front rounded-xl flex justify-center items-center'>
                 <img 
@@ -48,17 +49,19 @@ const About = () => {
 
          <div className='mt-12 flex'>
           <VerticalTimeline>
-            {experiences.map((experience) => (
+            {experiences.map((experience, index) => (
               <VerticalTimelineElement
                 key={experience.company_name}
                 date={experience.date}
-                icon={<div className='flex justify-center items-center w-full h-full'>
-                  <img 
-                    src={experience.icon}
-                    alt={experience.company_name}
-                    className='w-[60%] h-[60%] object-contain'
-                  />
-                </div>}
+                icon={
+                  <div className='flex justify-center items-center w-full h-full'>
+                    <img 
+                      src={experience.icon}
+                      alt={experience.company_name}
+                      className='w-[60%] h-[60%] object-contain'
+                    />
+                  </div>
+                }
 
                 iconStyle={{
                   background: experience.iconBg,
