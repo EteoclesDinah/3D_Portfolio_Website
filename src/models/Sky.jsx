@@ -12,10 +12,10 @@ const Sky = ({ isRotating }) => {
     //It ensures smooth animations by making the rotation frame rate-independent.
     //'delta' represents the time in seconds since the last frame
     useFrame((_, delta) => {
-      if(isRotating) {
+      
         //can modify the speed of rotation updating the numerical value
-        skyRef.current.rotation.y += 0.15 * delta;
-      }
+        skyRef.current.rotation.y += 0.05 * delta;
+      
     })
 
   return (
