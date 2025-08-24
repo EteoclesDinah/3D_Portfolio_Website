@@ -159,7 +159,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   useFrame(() => {
 
     //base continuous rotation speed for continuous rotation of island even when there is no drag/swipe/arrow key interaction 
-    const baseSpeed = -0.0015;
+    const baseSpeed = -0.00135;
 
     islandRef.current.rotation.y += baseSpeed;      
 
