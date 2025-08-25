@@ -8,13 +8,21 @@ const About = () => {
   return (
     <section className='max-container'> 
       <h1 className='head-text'>
-        Hello, I am <span className='blue-gradient_text font-semibold drop-shadow'>Kamala</span>
+        Hello, I am <span className='blue-gradient_text font-semibold drop-shadow'>Kamala Rai Danuwar.</span>
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Computer Engineering Student from Nepal, with practical experience in web development 
-          and data science.
+          A Computer Engineering Student from Nepal, with practical experience in web development 
+          and data science. <br></br>
+          With a passion for building things that live on the web, I enjoy turning ideas into interactive projects using 
+          React, React Native, Python, and other technologies.
+          Over the past few years, I’ve worked on projects in web development, mobile apps, and Python scripting, 
+          which have strengthened both my technical and problem-solving skills.<br></br>
+          For me, coding is not just about syntax; it’s about creating meaningful solutions and learning with every challenge.<br></br>
+          In addition to my projects, I have a keen interest in data analysis and research, which led me to publish a paper in IEEE.<br></br>
+          I’m eager to grow further, collaborate with others, and bring creative ideas to life.
+
         </p>
       </div>
 

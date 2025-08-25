@@ -4,7 +4,9 @@ import {
     contact,
     css,
     estate,
+    excel,
     express,
+    figma,
     git,
     github,
     html,
@@ -13,9 +15,12 @@ import {
     mongodb,
     motion,
     mui,
+    mysql,
     nextjs,
     nodejs,
+    powerpoint,
     pricewise,
+    python,
     react,
     redux,
     sass,
@@ -23,7 +28,8 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    word
 } from "../assets/icons";
 
 export const skills = [
@@ -62,21 +68,21 @@ export const skills = [
         name: "MongoDB",
         type: "Database",
     },
-    {
+    /*{
         imageUrl: motion,
         name: "Motion",
         type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
+    },*/
+    /*{
+       imageUrl: mui,
+       name: "Material-UI",
         type: "Frontend",
-    },
-    {
+    },*/
+   /* {
         imageUrl: nextjs,
         name: "Next.js",
         type: "Frontend",
-    },
+    },*/
     {
         imageUrl: nodejs,
         name: "Node.js",
@@ -92,11 +98,11 @@ export const skills = [
         name: "Redux",
         type: "State Management",
     },
-    {
+    /*{
         imageUrl: sass,
         name: "Sass",
         type: "Frontend",
-    },
+    },*/
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -106,6 +112,36 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
+    },
+    {
+        imageUrl: python,
+        name: "Python",
+        type: "Data Science, Backend",
+    },
+    {
+        imageUrl: excel,
+        name: "Excel",
+        type: "Productivity",
+    },
+    {
+        imageUrl: word,
+        name: "Word",
+        type: "Productivity",
+    },
+    {
+        imageUrl: powerpoint,
+        name: "Powerpoint",
+        type: "Productivity",
+    },
+    {
+        imageUrl: figma,
+        name: "Figma",
+        type: "Productivity",
+    },
+    {
+        imageUrl: mysql,
+        name: "MySQL",
+        type: "Productivity",
     }
 ];
 
