@@ -1,12 +1,16 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
+    bus,
     car,
     contact,
     css,
+    database,
+    documentation,
     estate,
     excel,
     express,
     figma,
+    gbd,
     git,
     github,
     html,
@@ -18,6 +22,7 @@ import {
     mysql,
     nextjs,
     nodejs,
+    notebook,
     powerpoint,
     pricewise,
     python,
@@ -29,6 +34,7 @@ import {
     tailwindcss,
     threads,
     typescript,
+    webscraping,
     word
 } from "../assets/icons";
 
@@ -145,59 +151,100 @@ export const skills = [
     }
 ];
 
+export const publications = [
+    {
+        title: 'A Classification Analysis-based Approach to Internet Adoption in Nepal.',
+        conference_name: '2025 3rd International Conference on Intelligent Systems, Advanced Computing and Communication (ISACC)',
+        icon: documentation,
+        iconBg: "#7bbcf0",
+        date: "February 2025",
+        doi: "DOI: 10.1109/ISACC65211.2025.10969200",
+        doi_link: "https://doi.org/10.1109/ISACC65211.2025.10969200", 
+        points: [
+            "Published in IEEE Xplore.",
+            "Applied advanced machine learning methods including XGBoost, SMOTE, Permutation Test, and Partial Dependence Analysis to examine the possible factors influencing Internet adoption in Nepal.",
+            "Provided emperical insights into the digital divide and implications for ICT policy planning.",
+            "Key Finding: ICT use is still a mostlly urban phenomenon, with mobile phones being the de facto medium of internet use.",
+            "Presented at ISACC 2025, an international IEEE conference.",
+        ],
+    },
+];
+
 export const experiences = [
+   {
+    title: "Cloud Analyst",
+    company_name: "GrowByData",
+    icon: gbd, 
+    iconBg: "#e0f2fe",
+    date: "August 2024 – Present", 
+    points: [
+      "Monitored and optimized cloud infrastructure performance, ensuring cost-effectiveness and scalability.",
+      "Worked with cloud platforms to deploy, configure, and manage resources efficiently.",
+      "Collaborated with cross-functional teams to analyze large datasets and generate insights.",
+      "Documented workflows and prepared reports using Excel, Word, and PowerPoint for internal and client use.",
+    ],
+  },
+];
+
+export const projectExperiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Data Analysis",
+        project_name: "A Classification Analysis-based Approach to Internet Adoption in Nepal.",
+        icon: database,
+        iconBg: "#AFBC88",
+        date: "2025",
+        points: [
+            "Applied advanced machine learning methods including XGBoost, SMOTE, Permutation Test, and Partial Dependence Analysis to examine the possible factors influencing Internet adoption in Nepal.",
+            "Provided emperical insights into the digital divide and implications for ICT policy planning.",
+            "Key Finding: ICT use is still a mostlly urban phenomenon, with mobile phones being the de facto medium of internet use.",
+            "Presented at ISACC 2025, an international IEEE conference.",
+        ]
+    },
+
+    {
+        title: "Frontend Developer",
+        project_name: "Web Scraping using Selenium",
+        icon: webscraping,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
+            "Developed an interactive web application using React, Flask, and Python.",
+            "Implemented responsive design with HTML, CSS, and JavaScript, ensuring cross-browser compatibility",
+            "Integrated backend functionality with Flask, and Python.",
+            "Scraped organic contents from Google.",
+            "Saved data n html_dumps, output.csv, url_list.csv",
+
+        ]
     },
+
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Full Stack Developer",
+        project_name: "Ringroad Bus Fare Calculator",
+        icon: bus,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "Jan 2024 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Built full-stack application, using ReactNative.",
+            "Designed database schemas and managed data storage using MongoDB and MySQL.",
+            "Created interactive dashboards and reports.",
+            "Designed mockups and prototypes using Figma to visualize UI components.",
         ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+  },
+
+  {
+    title: "Full Stack",
+    project_name:"E-Notes",
+    icon: notebook,
+    iconBg: "#EDDEA4",
+    date: "2022",
+    points: [
+        "Built full-stack web-application, connecting HTML frontend interfaces with PHP",
+        "Designed database schemas and managed data storage using MySQL, and XAMPP.",
+        "Users can access the notes, view, and download of different semesters of Engineering Fields namely Computer, IT, and Civil, under Pokhara University.",
+        "Only the registered users, teachers, or admin can upload, delete, modify the notes.",
+        "Designed mockups and prototypes using Figma to visualize UI components.",
+    ]
+  }
 ];
 
 export const socialLinks = [

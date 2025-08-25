@@ -43,7 +43,7 @@ const renderContent = {
     ),
     3: (
          <InfoBox 
-            text="Each project tells a story of learning — take a look."
+            text="Each project tells a story of learning; take a look."
             link='/projects'
             btnText="Visit my Portfolio."
         />

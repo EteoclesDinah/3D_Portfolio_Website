@@ -32,6 +32,12 @@ import word from './word.svg'
 import powerpoint from './powerpoint.svg'
 import figma from './figma.svg'
 import mysql from './mysql.svg'
+import documentation from './documentation.svg'
+import gbd from './gbd.png'
+import webscraping from './webscraping.png'
+import database from './database.svg'
+import bus from './bus.svg'
+import notebook from './notebook.svg'
 
 export {
     css,
@@ -68,4 +74,10 @@ export {
     powerpoint,
     figma,
     mysql,
+    documentation,
+    gbd,
+    webscraping,
+    database,
+    bus,
+    notebook
 }

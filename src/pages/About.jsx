@@ -1,7 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { skills, experiences } from '../constants';
+import { skills, publications, experiences, projectExperiences } from '../constants';
 import CTA from '../components/CTA';
 
 const About = () => {
@@ -46,12 +46,98 @@ const About = () => {
       </div>
 
       <div className='py-16'>
-        <h3 className='subhead-text'>Work Experience</h3>
+        <h3 className='subhead-text'>Publications</h3>
 
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-            I have worked with all sorts of technologies, leveling up my skills, and teaming up with smart people. 
+            Beyond my technical projects, I have also contributed to academic research and 
+            shared my findings with the wider community. My work has been published at
+            recognized international conference.
             <br />Here's the rundown:
+          </p>
+         </div>
+
+         <div className='mt-12 flex'>
+          <VerticalTimeline>
+            {publications.map((publication, index) => (
+              <VerticalTimelineElement
+                key={publication.conference_name}
+                date={publication.date}
+                icon={
+                  <div className='flex justify-center items-center w-full h-full'>
+                    <img 
+                      src={publication.icon}
+                      alt={publication.conference_name}
+                      className='w-[60%] h-[60%] object-contain'
+                    />
+                  </div>
+                }
+
+                iconStyle={{
+                  background: publication.iconBg,
+                }}
+
+                contentStyle={{
+                  borderBottom: '8px',
+                  borderStyle: 'solid',
+                  borderBottomColor: publication.iconBg,
+                  boxShadow: 'none',
+                }}
+              >
+                <div>
+                  <h3 className='text-black text-xl font-poppins font-semibold'>
+                    {publication.title}
+                  </h3>
+
+                  <p className='text-black-500 font-medium font-base'
+                  style={{margin:0}}>
+                    {publication.conference_name}
+                  </p>
+
+                  <p className='text-black-400 font-medium font-base'
+                  style={{margin:0}}>
+                    <a 
+                      href={publication.doi_link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="underline hover:text-blue-800"
+                    >
+                      {publication.doi}
+                    </a>
+                  </p>
+
+                </div>
+                
+
+                <ul className='timeline-points list-disc my-5 ml-5 space-y-2'>
+                  {publication.points.map(( point, index ) => (
+                    <li 
+                      key={`publication-point-${index}`}
+                      className='text-black/50 font-normal pl-1 text-sm'
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+         </div>
+
+      </div>
+
+      <hr className='border-slate-200'/>
+
+      <div className='py-16'>
+        <h3 className='subhead-text'>Work Experiences</h3>
+
+        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+          <p>
+            My professional journey includes working in a dynamic team environment where I
+            applied technical knowledge to solve real-world challenges. This experience
+            allowed me to collaborate with industry professionals, enhance my technical
+            skills, and gain valuable insights into professional workflows and practices.
           </p>
          </div>
 
@@ -95,6 +181,75 @@ const About = () => {
 
                 <ul className='timeline-points list-disc my-5 ml-5 space-y-2'>
                   {experience.points.map(( point, index ) => (
+                    <li 
+                      key={`experience-point-${index}`}
+                      className='text-black/50 font-normal pl-1 text-sm'
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+         </div>
+
+      </div>
+
+      <hr className='border-slate-200'/>
+
+      <div className='py-16'>
+        <h3 className='subhead-text'>Project Experiences</h3>
+
+        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+          <p>
+            Alongside formal work experience,
+            I have worked with various technologies, leveling up my skills, and teaming up with smart people.
+            <br />Here's the rundown:
+          </p>
+         </div>
+
+         <div className='mt-12 flex'>
+          <VerticalTimeline>
+            {projectExperiences.map((projectExperience, index) => (
+              <VerticalTimelineElement
+                key={projectExperience.company_name}
+                date={projectExperience.date}
+                icon={
+                  <div className='flex justify-center items-center w-full h-full'>
+                    <img 
+                      src={projectExperience.icon}
+                      alt={projectExperience.project_name}
+                      className='w-[60%] h-[60%] object-contain'
+                    />
+                  </div>
+                }
+
+                iconStyle={{
+                  background: projectExperience.iconBg,
+                }}
+
+                contentStyle={{
+                  borderBottom: '8px',
+                  borderStyle: 'solid',
+                  borderBottomColor: projectExperience.iconBg,
+                  boxShadow: 'none',
+                }}
+              >
+                <div>
+                  <h3 className='text-black text-xl font-poppins font-semibold'>
+                    {projectExperience.title}
+                  </h3>
+
+                  <p className='text-black-500 font-medium font-base'
+                  style={{margin:0}}>
+                    {projectExperience.project_name}
+                  </p>
+                </div>
+
+                <ul className='timeline-points list-disc my-5 ml-5 space-y-2'>
+                  {projectExperience.points.map(( point, index ) => (
                     <li 
                       key={`experience-point-${index}`}
                       className='text-black/50 font-normal pl-1 text-sm'
