@@ -1,7 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { skills, publications, experiences, projectExperiences } from '../constants';
+import { skills, publications, experiences, practicalExperiences } from '../constants';
 import CTA from '../components/CTA';
 
 const About = () => {
@@ -13,16 +13,7 @@ const About = () => {
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          A Computer Engineering Student from Nepal, with practical experience in web development 
-          and data science. <br></br>
-          With a passion for building things that live on the web, I enjoy turning ideas into interactive projects using 
-          React, React Native, Python, and other technologies.
-          Over the past few years, I’ve worked on projects in web development, mobile apps, and Python scripting, 
-          which have strengthened both my technical and problem-solving skills.<br></br>
-          For me, coding is not just about syntax; it’s about creating meaningful solutions and learning with every challenge.<br></br>
-          In addition to my projects, I have a keen interest in data analysis and research, which led me to publish a paper in IEEE.<br></br>
-          I’m eager to grow further, collaborate with others, and bring creative ideas to life.
-
+          With practical experience in <b>web development, data science, and cloud computing</b>, I enjoy transforming ideas into interactive applications using technologies like <b>React, Python, </b>and more.
         </p>
       </div>
 
@@ -52,7 +43,7 @@ const About = () => {
           <p>
             Beyond my technical projects, I have also contributed to academic research and 
             shared my findings with the wider community. My work has been published at
-            recognized international conference.
+            recognized international conferences.
             <br />Here's the rundown:
           </p>
          </div>
@@ -134,11 +125,10 @@ const About = () => {
 
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-            My professional journey includes working in a dynamic team environment where I
-            applied technical knowledge to solve real-world challenges. This experience
-            allowed me to collaborate with industry professionals, enhance my technical
-            skills, and gain valuable insights into professional workflows and practices.
+            My professional journey involves working in dynamic team environments, applying technical knowledge to solve real-world challenges. 
+            This experience allowed me to collaborate with industry professionals, strengthen my technical skills, and gain valuable insights into workflows and best practices.
           </p>
+
          </div>
 
          <div className='mt-12 flex'>
@@ -200,56 +190,57 @@ const About = () => {
       <hr className='border-slate-200'/>
 
       <div className='py-16'>
-        <h3 className='subhead-text'>Project Experiences</h3>
+        <h3 className='subhead-text'>Practical Experiences</h3>
 
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
             Alongside formal work experience,
-            I have worked with various technologies, leveling up my skills, and teaming up with smart people.
-            <br />Here's the rundown:
+            I have worked with various technologies, leveling up my skills, and knowledge.
+            <br />
+            Through academic, personal, and research projects, I have gained practical experiences in:
           </p>
          </div>
 
          <div className='mt-12 flex'>
           <VerticalTimeline>
-            {projectExperiences.map((projectExperience, index) => (
+            {practicalExperiences.map((practicalExperience, index) => (
               <VerticalTimelineElement
-                key={projectExperience.company_name}
-                date={projectExperience.date}
+                key={practicalExperience.company_name}
+                date={practicalExperience.date}
                 icon={
                   <div className='flex justify-center items-center w-full h-full'>
                     <img 
-                      src={projectExperience.icon}
-                      alt={projectExperience.project_name}
+                      src={practicalExperience.icon}
+                      alt={practicalExperience.project_name}
                       className='w-[60%] h-[60%] object-contain'
                     />
                   </div>
                 }
 
                 iconStyle={{
-                  background: projectExperience.iconBg,
+                  background: practicalExperience.iconBg,
                 }}
 
                 contentStyle={{
                   borderBottom: '8px',
                   borderStyle: 'solid',
-                  borderBottomColor: projectExperience.iconBg,
+                  borderBottomColor: practicalExperience.iconBg,
                   boxShadow: 'none',
                 }}
               >
                 <div>
                   <h3 className='text-black text-xl font-poppins font-semibold'>
-                    {projectExperience.title}
+                    {practicalExperience.title}
                   </h3>
 
                   <p className='text-black-500 font-medium font-base'
                   style={{margin:0}}>
-                    {projectExperience.project_name}
+                    {practicalExperience.project_name}
                   </p>
                 </div>
 
                 <ul className='timeline-points list-disc my-5 ml-5 space-y-2'>
-                  {projectExperience.points.map(( point, index ) => (
+                  {practicalExperience.points.map(( point, index ) => (
                     <li 
                       key={`experience-point-${index}`}
                       className='text-black/50 font-normal pl-1 text-sm'

@@ -12,12 +12,12 @@ const Projects = () => {
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          I have embarked on numerious projects throughout the years,
+          I have embarked on numerous projects throughout the years,
           but these are the ones I hold closest to my heart.
-          Many of these projects source code are available on my githup page,
+          Many of these projects source code are available on my GitHub page,
           so if you come across something that piques your interest, feel free
           to explore the codebase and contribute your ideas for further enhancements.
-          <br />You feedbacks, and critics are highly valuable!
+          <br />You feedback, and critics are highly valuable!
         </p>
       </div>
 

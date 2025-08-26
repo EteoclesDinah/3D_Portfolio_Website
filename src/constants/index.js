@@ -158,13 +158,13 @@ export const publications = [
         icon: documentation,
         iconBg: "#7bbcf0",
         date: "February 2025",
-        doi: "DOI: 10.1109/ISACC65211.2025.10969200",
+        doi: "10.1109/ISACC65211.2025.10969200",
         doi_link: "https://doi.org/10.1109/ISACC65211.2025.10969200", 
         points: [
             "Published in IEEE Xplore.",
             "Applied advanced machine learning methods including XGBoost, SMOTE, Permutation Test, and Partial Dependence Analysis to examine the possible factors influencing Internet adoption in Nepal.",
-            "Provided emperical insights into the digital divide and implications for ICT policy planning.",
-            "Key Finding: ICT use is still a mostlly urban phenomenon, with mobile phones being the de facto medium of internet use.",
+            "Provided empirical insights into the digital divide and implications for ICT policy planning.",
+            "Key Finding: ICT use is still a mostly urban phenomenon, with mobile phones being the de facto medium of internet use.",
             "Presented at ISACC 2025, an international IEEE conference.",
         ],
     },
@@ -186,63 +186,52 @@ export const experiences = [
   },
 ];
 
-export const projectExperiences = [
-    {
-        title: "Data Analysis",
-        project_name: "A Classification Analysis-based Approach to Internet Adoption in Nepal.",
-        icon: database,
-        iconBg: "#AFBC88",
-        date: "2025",
-        points: [
-            "Applied advanced machine learning methods including XGBoost, SMOTE, Permutation Test, and Partial Dependence Analysis to examine the possible factors influencing Internet adoption in Nepal.",
-            "Provided emperical insights into the digital divide and implications for ICT policy planning.",
-            "Key Finding: ICT use is still a mostlly urban phenomenon, with mobile phones being the de facto medium of internet use.",
-            "Presented at ISACC 2025, an international IEEE conference.",
-        ]
-    },
-
-    {
-        title: "Frontend Developer",
-        project_name: "Web Scraping using Selenium",
-        icon: webscraping,
-        iconBg: "#accbe1",
-        date: "2024",
-        points: [
-            "Developed an interactive web application using React, Flask, and Python.",
-            "Implemented responsive design with HTML, CSS, and JavaScript, ensuring cross-browser compatibility",
-            "Integrated backend functionality with Flask, and Python.",
-            "Scraped organic contents from Google.",
-            "Saved data n html_dumps, output.csv, url_list.csv",
-
-        ]
-    },
-
-    {
-        title: "Full Stack Developer",
-        project_name: "Ringroad Bus Fare Calculator",
-        icon: bus,
-        iconBg: "#fbc3bc",
-        date: "Jan 2024 - Present",
-        points: [
-            "Built full-stack application, using ReactNative.",
-            "Designed database schemas and managed data storage using MongoDB and MySQL.",
-            "Created interactive dashboards and reports.",
-            "Designed mockups and prototypes using Figma to visualize UI components.",
-        ],
+export const practicalExperiences = [
+  {
+    title: "Data Analysis & Research",
+    icon: database,
+    iconBg: "#AFBC88",
+    date: "2025",
+    points: [
+      "Conducted empirical data analysis and research using advanced machine learning methods such as XGBoost, Random Forest, SMOTE, Permutation Tests, and many more.",
+      "Applied statistical tools and visualization techniques to explore social, behavioral, and policy-related datasets.",
+      "Gained experience in publishing and presenting at international IEEE conferences."
+    ]
   },
 
   {
-    title: "Full Stack",
-    project_name:"E-Notes",
+    title: "Frontend Development",
+    icon: webscraping,
+    iconBg: "#accbe1",
+    date: "2024",
+    points: [
+      "Built responsive and interactive web applications with React, HTML, CSS, and JavaScript.",
+      "Integrated APIs and backend services to deliver dynamic, data-driven features.",
+      "Worked with automation and web scraping tools like Selenium and Python for data extraction."
+    ]
+  },
+
+  {
+    title: "Full-Stack Development",
+    icon: bus,
+    iconBg: "#fbc3bc",
+    date: "2023 – Present",
+    points: [
+      "Designed and implemented full-stack applications using React Native, Node.js, Express, MongoDB, and MySQL.",
+      "Developed solutions for real-world use cases such as transportation fare calculators and academic note-sharing platforms.",
+      "Created and managed database schemas, authentication systems, and user access controls."
+    ]
+  },
+
+  {
+    title: "UI/UX & Prototyping",
     icon: notebook,
     iconBg: "#EDDEA4",
-    date: "2022",
+    date: "2022 – Present",
     points: [
-        "Built full-stack web-application, connecting HTML frontend interfaces with PHP",
-        "Designed database schemas and managed data storage using MySQL, and XAMPP.",
-        "Users can access the notes, view, and download of different semesters of Engineering Fields namely Computer, IT, and Civil, under Pokhara University.",
-        "Only the registered users, teachers, or admin can upload, delete, modify the notes.",
-        "Designed mockups and prototypes using Figma to visualize UI components.",
+      "Designed user-friendly mockups and prototypes using Figma to visualize UI components.",
+      "Collaborated on projects requiring both functional and aesthetic design balance.",
+      "Improved usability and accessibility across web and mobile platforms."
     ]
   }
 ];
@@ -256,56 +245,45 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/EteoclesDinah',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/kamala-rai-danuwar-54b07a294/',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
+        iconUrl: database,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Data Analysis of Internet Adoption of Nepal',
+        description: 'Explored factors influencing Internet adoption in Nepal using advanced machine learning methods like XGBoost, SMOTE, PT, PDPS, with insights published in IEEE Xplore.',
+        link: 'https://github.com/EteoclesDinah',
     },
+
     {
-        iconUrl: car,
+        iconUrl: webscraping,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Web Scraping using Selenium',
+        description: 'Automated organic data scrapping from Google, and exported results to CSV files for research analysis; building full-stack web application using React, Flask, and Python.',
+        link: 'https://github.com/EteoclesDinah/WebScraping_Selenium',
     },
+
     {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        iconUrl: bus,
+        theme: 'btn-back-red',
+        name: 'Ringroad Bus Fare Calculator',
+        description: 'Developed a mobile app to calculate and display fares for bus stops along Kathmandu’s Ring Road using React Native.',
+        link: 'https://github.com/EteoclesDinah/RingRoadBusFareCalculator',
     },
+
     {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
+        iconUrl: notebook,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+        name: 'E-Notes Platform',
+        description: 'Built a full-stack notes sharing platform with PHP and MySQL, enabling students and teachers to upload, access, and manage academic resources.',
+        link: 'https://github.com/EteoclesDinah/E-NOTES',
+    },
 ];
