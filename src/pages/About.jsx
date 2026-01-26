@@ -129,9 +129,9 @@ const About = () => {
             This experience allowed me to collaborate with industry professionals, strengthen my technical skills, and gain valuable insights into workflows and best practices.
           </p>
 
-         </div>
+        </div>
 
-         <div className='mt-12 flex'>
+        <div className='mt-12 flex'>
           <VerticalTimeline>
             {experiences.map((experience, index) => (
               <VerticalTimelineElement
@@ -183,7 +183,7 @@ const About = () => {
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
-         </div>
+        </div>
 
       </div>
 

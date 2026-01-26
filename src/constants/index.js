@@ -176,14 +176,40 @@ export const experiences = [
     company_name: "GrowByData",
     icon: gbd, 
     iconBg: "#e0f2fe",
-    date: "August 2024 – Present", 
+    date: "June 2024 – Present", 
     points: [
-      "Monitored and optimized cloud infrastructure performance, ensuring cost-effectiveness and scalability.",
-      "Worked with cloud platforms to deploy, configure, and manage resources efficiently.",
-      "Collaborated with cross-functional teams to analyze large datasets and generate insights.",
-      "Documented workflows and prepared reports using Excel, Word, and PowerPoint for internal and client use.",
+      "Analyzed variations in LLM responses and SERP outputs across platforms to support search quality and model behavior studies.",
+      "Worked extensively with CSV and Excel files to organize, audit, and report prompt-response datasets.",
+      "Performed ad-hoc analyses on large datasets to identify trends, anomalies, and optimization opportunities.",
+      "Collaborated with cross-functional teams to ensure accuracy, consistency, and documentation of collected data.",
     ],
   },
+
+  {
+    title: "Data QA Analyst",
+    company_name: "GrowByData",
+    icon: gbd, 
+    iconBg: "#e0f2fe",
+    date: "November 2025 – Present", 
+    points: [
+      "Validated automated outputs against structured prompt datasets and documentation.",
+      "Identified missing, duplicate, and inconsistent data across multiple platforms.",
+      "Generated QA summaries and terminal-based reports for internal stakeholders.",
+    ],
+  },
+
+  {
+    title: "Data Engineering Internship",
+    company_name: "GrowByData",
+    icon: gbd, 
+    iconBg: "#e0f2fe",
+    date: "September 2025 – November 2025 (3 months)", 
+    points: [
+      "Built and maintained web scraping pipelines using Python and Selenium.",
+      "Designed and implemented data ETL pipelines using Python and SQL to process and validate structured and unstructured data.",
+      "Optimized database queries and improved data processing performance through indexing and query optimization.",
+    ],
+  }
 ];
 
 export const practicalExperiences = [
