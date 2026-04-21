@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-import { Home, About, Projects, Contact } from './pages';
+import { Home, About, Projects, Contact, Resume } from './pages';
 
 const AppContent = () => {
   const location = useLocation();
@@ -18,6 +18,7 @@ const AppContent = () => {
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/resume' element={<Resume />} />
       </Routes>
 
       {/* Show footer only if not on home */}

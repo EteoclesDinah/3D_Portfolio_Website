@@ -29,6 +29,13 @@ const Navbar = () => {
         </NavLink>
 
         <NavLink
+          to="/resume"
+          className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}
+        >
+          Resume
+        </NavLink>
+
+        <NavLink
           to="/contact"
           className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}
         >
