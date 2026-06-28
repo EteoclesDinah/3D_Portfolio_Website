@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { cyber_security, data_analytics, meta, shopify, starbucks, tesla } from "../assets/images";
 import {
     bus,
     car,
@@ -37,6 +37,7 @@ import {
     webscraping,
     word
 } from "../assets/icons";
+import { title } from "framer-motion/client";
 
 export const skills = [
     {
@@ -311,5 +312,23 @@ export const projects = [
         name: 'E-Notes Platform',
         description: 'Built a full-stack notes sharing platform with PHP and MySQL, enabling students and teachers to upload, access, and manage academic resources.',
         link: 'https://github.com/EteoclesDinah/E-NOTES',
+    },
+];
+
+export const certifications = [
+    {
+        title: 'Data Analytics and Power BI Workshop',
+        company_name: 'Vrit Jobs',
+        date: 'February 2026',
+        icon: data_analytics,
+        description: 'Completed a 2-day hands-on workshop focused on data analytics and business intelligence using Microsoft Power BI. Learned the fundamentals of data cleaning, transformation, visualization, and dashboard creation to support data-driven decision-making.',
+    },
+
+    {
+        title: 'Cyber Security Workshop',
+        company_name: 'ITSNP',
+        date: 'July 2025',
+        icon: cyber_security,
+        description: 'Completed a 10-day intensive hands-on workshop covering the fundamentals of cybersecurity, network security, ethical hacking concepts, and security best practices. Gained practical experience in identifying vulnerabilities, understanding cyber threats, and implementing basic defensive security measures.',
     },
 ];
