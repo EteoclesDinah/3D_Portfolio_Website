@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Kamala_Rai_Resume from "../assets/files/Kamala_Rai_Resume.pdf";
+import { certifications } from "../constants";
+import CTA from "../components/CTA";
 
 const Resume = () => {
   return (
@@ -31,20 +33,70 @@ const Resume = () => {
         </a>
       </motion.div>
 
-      <div className="py-16">
-        <h3 className="subhead-text">Experience</h3>
-
-      </div>
+      <hr className='border-slate-200 mt-10'/>
 
       <div className="py-16">
         <h3 className="subhead-text">Certifications</h3>
 
+        <div className="mt-5 flex flex-col gap-3 text-slate-500">
+          <p>
+            Beyond my academic research and technical projects, I have also pursued professional certifications 
+            to strengthen my expertise. These certifications demonstrate my commitment to continuous learning and 
+            staying up to date with industry standards and emerging technologies.
+            <br />Here's the rundown:
+          </p>
+        </div>
+
+        <div className='mt-5 flex flex-col'>
+          {certifications.map((certificate) => (
+            <div className="w-full" key={certificate.title}>
+              <div className='block-container'>
+
+                <div className='mt-5 flex flex-col'>
+                  <h4 className='text-2xl font-semibold font-poppins'>
+                    {certificate.title}
+                  </h4>
+
+                  <p className='text-black-500 font-medium font-base' style={{margin:0}}>
+                    {certificate.company_name}
+                  </p>
+
+                  <p className='text-black-400 font-medium font-base' style={{margin:0}}>
+                    {certificate.date}
+                  </p>
+                  <div className='mt-2 flex flex-col gap-3 text-slate-500'>
+                    <p>
+                      {certificate.description}
+                    </p>
+                  </div>
+                  
+
+                </div>
+
+                <div className='flex justify-center items-center mt-5 mb-5'>
+                  <img
+                    src={certificate.imageUrl}
+                    alt={certificate.title}
+                    className='w-1/2 h-1/2 object-contain'
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
+
+      <hr className='border-slate-200'/>
 
       <div className="py-16">
         <h3 className="subhead-text">Education</h3>
 
       </div>
+
+      <hr className='border-slate-200'/>
+
+      <CTA />
     </section>
   );
 };

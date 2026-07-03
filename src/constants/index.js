@@ -318,17 +318,19 @@ export const projects = [
 export const certifications = [
     {
         title: 'Data Analytics and Power BI Workshop',
+        imageUrl: data_analytics,
+        theme: 'btn-back-yellow',
         company_name: 'Vrit Jobs',
         date: 'February 2026',
-        icon: data_analytics,
         description: 'Completed a 2-day hands-on workshop focused on data analytics and business intelligence using Microsoft Power BI. Learned the fundamentals of data cleaning, transformation, visualization, and dashboard creation to support data-driven decision-making.',
     },
 
     {
         title: 'Cyber Security Workshop',
+        imageUrl: cyber_security,
+        theme: 'btn-back-red',
         company_name: 'ITSNP',
         date: 'July 2025',
-        icon: cyber_security,
         description: 'Completed a 10-day intensive hands-on workshop covering the fundamentals of cybersecurity, network security, ethical hacking concepts, and security best practices. Gained practical experience in identifying vulnerabilities, understanding cyber threats, and implementing basic defensive security measures.',
     },
 ];
