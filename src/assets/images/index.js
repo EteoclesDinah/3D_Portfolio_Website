@@ -6,6 +6,9 @@ import tesla from './tesla.png'
 import logo from './logo.svg'
 import cyber_security from './cyber_security.png'
 import data_analytics from './data_analytics.png'
+import EEC from './EEC.jpg'
+import dav from './dav.png'
+import nspes from './nspes.jpg'
 
 export {
     hero,
@@ -15,5 +18,8 @@ export {
     tesla,
     logo,
     cyber_security,
-    data_analytics
+    data_analytics,
+    EEC,
+    dav,
+    nspes
 }

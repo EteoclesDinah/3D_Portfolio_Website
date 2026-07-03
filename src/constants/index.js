@@ -1,4 +1,15 @@
-import { cyber_security, data_analytics, meta, shopify, starbucks, tesla } from "../assets/images";
+import { 
+    cyber_security, 
+    data_analytics, 
+    dav, 
+    EEC, 
+    meta, 
+    nspes, 
+    shopify, 
+    starbucks, 
+    tesla 
+} from "../assets/images";
+
 import {
     bus,
     car,
@@ -333,4 +344,48 @@ export const certifications = [
         date: 'July 2025',
         description: 'Completed a 10-day intensive hands-on workshop covering the fundamentals of cybersecurity, network security, ethical hacking concepts, and security best practices. Gained practical experience in identifying vulnerabilities, understanding cyber threats, and implementing basic defensive security measures.',
     },
+];
+
+export const education = [
+    {
+    title: "Cloud Analyst",
+    company_name: "GrowByData",
+    icon: gbd, 
+    iconBg: "#e0f2fe",
+    date: "June 2024 – Present", 
+    points: [
+      "Analyzed variations in LLM responses and SERP outputs across platforms to support search quality and model behavior studies.",
+      "Worked extensively with CSV and Excel files to organize, audit, and report prompt-response datasets.",
+      "Performed ad-hoc analyses on large datasets to identify trends, anomalies, and optimization opportunities.",
+      "Collaborated with cross-functional teams to ensure accuracy, consistency, and documentation of collected data.",
+    ],
+  },
+    {
+        title: 'Bachelor of Engineering in Computer',
+        name: 'Everest Engineering College',
+        icon: EEC,
+        iconBg: "#accbe1",
+        date: '2020 A.D. - 2026 A.D.',
+        points: [],
+    },
+
+    {
+        title: '+2, Science',
+        name: 'DAV College',
+        icon: dav,
+        iconBg: "#fbc3bc",
+        date: '2017 A.D.- 2019 A.D.',
+        points: [],
+    },
+
+    {
+        title: 'Primary, Lower Secondary',
+        name: 'New Star Pole School',
+        icon: nspes,
+        iconBg: "#EDDEA4",
+        date: '',
+        points: [],
+    },
+
+
 ];
