@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import 'react-vertical-timeline-component/style.min.css';
 import Kamala_Rai_Resume from "../assets/files/Kamala_Rai_Resume.pdf";
-import { certifications } from "../constants";
+import { certifications, educations } from "../constants";
 import CTA from "../components/CTA";
 
 const Resume = () => {
@@ -92,6 +94,81 @@ const Resume = () => {
       <div className="py-16">
         <h3 className="subhead-text">Education</h3>
 
+        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+          <p>
+            My academic journey has laid the foundation for my technical expertise and professional growth. 
+            Through each stage of my education, I have developed strong analytical, problem-solving, 
+            and practical skills while continuously expanding my knowledge. The institutions and programs 
+            below represent the milestones that have shaped my learning and prepared me for future challenges.
+            <br />
+            Explore My Educational Journey:
+          </p>
+        </div>
+
+        <div className='mt-12 flex'>
+          <VerticalTimeline>
+            {educations.map((education, index) => (
+              <VerticalTimelineElement
+                key={education.name}
+                date={education.date}
+                icon={
+                  <div className='flex justify-center items-center w-full h-full'>
+                    <img 
+                      src={education.icon}
+                      alt={education.name}
+                      className='w-[60%] h-[60%] object-contain'
+                    />
+                  </div>
+                }
+
+                iconStyle={{
+                  background: education.iconBg,
+                }}
+
+                contentStyle={{
+                  borderBottom: '8px',
+                  borderStyle: 'solid',
+                  borderBottomColor: education.iconBg,
+                  boxShadow: 'none',
+                }}
+              >
+                <div>
+
+                  <h3 className='text-black text-xl font-poppins font-bold'>
+                    {education.title0}
+                  </h3>
+
+                  <h3 className='text-black text-l font-poppins'>
+                    {education.title1}
+                  </h3>
+
+                  <p className='text-black-500 font-medium font-base'
+                  style={{margin:0}}>
+                    {education.name}
+                  </p>
+
+                  <p className='text-black-300 font-medium font-base'
+                  style={{margin:0}}>
+                    {education.grade}
+                  </p>
+                </div>
+
+                <ul className='timeline-points list-disc my-5 ml-5 space-y-2'>
+                  {education.points.map(( point, index ) => (
+                    <li 
+                      key={`experience-point-${index}`}
+                      className='text-black/50 font-normal pl-1 text-sm'
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+
       </div>
 
       <hr className='border-slate-200'/>
@@ -102,3 +179,4 @@ const Resume = () => {
 };
 
 export default Resume;
+
