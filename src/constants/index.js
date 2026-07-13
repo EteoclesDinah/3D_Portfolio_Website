@@ -346,23 +346,12 @@ export const certifications = [
     },
 ];
 
-export const education = [
+export const educations = [
     {
-    title: "Cloud Analyst",
-    company_name: "GrowByData",
-    icon: gbd, 
-    iconBg: "#e0f2fe",
-    date: "June 2024 – Present", 
-    points: [
-      "Analyzed variations in LLM responses and SERP outputs across platforms to support search quality and model behavior studies.",
-      "Worked extensively with CSV and Excel files to organize, audit, and report prompt-response datasets.",
-      "Performed ad-hoc analyses on large datasets to identify trends, anomalies, and optimization opportunities.",
-      "Collaborated with cross-functional teams to ensure accuracy, consistency, and documentation of collected data.",
-    ],
-  },
-    {
-        title: 'Bachelor of Engineering in Computer',
+        title0: 'Bachelor\'s Degree',
+        title1: 'Bachelor of Engineering in Computer',
         name: 'Everest Engineering College',
+        grade: '',
         icon: EEC,
         iconBg: "#accbe1",
         date: '2020 A.D. - 2026 A.D.',
@@ -370,8 +359,10 @@ export const education = [
     },
 
     {
-        title: '+2, Science',
+        title0: 'Higher Secondary',
+        title1: '+2, Science (Biology)',
         name: 'DAV College',
+        grade: '3.53 CGPA (out of 4.0)',
         icon: dav,
         iconBg: "#fbc3bc",
         date: '2017 A.D.- 2019 A.D.',
@@ -379,13 +370,13 @@ export const education = [
     },
 
     {
-        title: 'Primary, Lower Secondary',
+        title0: 'Primary, Lower Secondary',
+        title1: 'SEE',
         name: 'New Star Pole School',
+        grade: '3.80 GPA (out of 4.0)',
         icon: nspes,
         iconBg: "#EDDEA4",
         date: '',
         points: [],
     },
-
-
 ];

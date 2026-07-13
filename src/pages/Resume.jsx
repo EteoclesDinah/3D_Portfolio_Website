@@ -6,6 +6,8 @@ import Kamala_Rai_Resume from "../assets/files/Kamala_Rai_Resume.pdf";
 import { certifications, educations } from "../constants";
 import CTA from "../components/CTA";
 
+const MotionDiv = motion.div;
+
 const Resume = () => {
   return (
     <section className='max-container'>
@@ -17,7 +19,7 @@ const Resume = () => {
         </p>
       </div>
 
-      <motion.div
+      <MotionDiv
         className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col items-center text-center space-y-8 md:space-y-14"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,7 +35,7 @@ const Resume = () => {
           <span className="relative">View Resume</span>
           <span className="ml-3 h-2 w-2 bg-slate-950 transition-transform group-hover:translate-x-1" />
         </a>
-      </motion.div>
+      </MotionDiv>
 
       <hr className='border-slate-200 mt-10'/>
 
@@ -49,12 +51,12 @@ const Resume = () => {
           </p>
         </div>
 
-        <div className='mt-5 flex flex-col'>
-          {certifications.map((certificate) => (
+        <div className='mt-5 flex flex-col gap-12'>
+          {certifications.map((certificate, index) => (
             <div className="w-full" key={certificate.title}>
-              <div className='block-container'>
+              <div className={`block-container flex flex-col items-center gap-8 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
 
-                <div className='mt-5 flex flex-col'>
+                <div className='mt-5 flex flex-1 flex-col'>
                   <h4 className='text-2xl font-semibold font-poppins'>
                     {certificate.title}
                   </h4>
@@ -75,11 +77,11 @@ const Resume = () => {
 
                 </div>
 
-                <div className='flex justify-center items-center mt-5 mb-5'>
+                <div className='flex flex-1 justify-center items-center mt-5 mb-5'>
                   <img
                     src={certificate.imageUrl}
                     alt={certificate.title}
-                    className='w-1/2 h-1/2 object-contain'
+                    className='w-full max-w-md object-contain'
                   />
                 </div>
               </div>
@@ -107,7 +109,7 @@ const Resume = () => {
 
         <div className='mt-12 flex'>
           <VerticalTimeline>
-            {educations.map((education, index) => (
+            {educations.map((education) => (
               <VerticalTimelineElement
                 key={education.name}
                 date={education.date}
@@ -179,4 +181,3 @@ const Resume = () => {
 };
 
 export default Resume;
-
