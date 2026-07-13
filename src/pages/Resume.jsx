@@ -13,10 +13,10 @@ const Resume = () => {
     <section className='max-container'>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          A data enthusiast passionate about <b>machine learning, analytics, and automation</b>.
+          Passionate about transforming data into meaningful insights through <b>Machine Learning, Analytics, and Automation</b>.
           <br />
-          The resume highlights my technical skills, research projects, and professional experience.
-        </p>
+          This page showcases my education, certifications, technical skills, projects,
+          and experiences that demonstrate my continuous learning and professional growth.        </p>
       </div>
 
       <MotionDiv
@@ -44,10 +44,10 @@ const Resume = () => {
 
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
-            Beyond my academic research and technical projects, I have also pursued professional certifications 
-            to strengthen my expertise. These certifications demonstrate my commitment to continuous learning and 
-            staying up to date with industry standards and emerging technologies.
-            <br />Here's the rundown:
+            Beyond my academic research and technical projects, I have actively pursued professional certifications to deepen my understanding of modern data science, 
+            machine learning, cloud technologies, and software development practices. These certifications complement my formal education by providing hands-on exposure 
+            to industry tools, real-world workflows, and best practices. They reflect my commitment to continuous learning, professional growth, and staying current with rapidly evolving technologies.
+            <br /><br />Explore the certifications that have contributed to my professional journey:
           </p>
         </div>
 
@@ -98,12 +98,13 @@ const Resume = () => {
 
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-            My academic journey has laid the foundation for my technical expertise and professional growth. 
-            Through each stage of my education, I have developed strong analytical, problem-solving, 
-            and practical skills while continuously expanding my knowledge. The institutions and programs 
-            below represent the milestones that have shaped my learning and prepared me for future challenges.
-            <br />
-            Explore My Educational Journey:
+            My educational journey has provided a strong foundation in computer science, mathematics, data analytics, and research methodology. Throughout my academic career, 
+            I have developed critical thinking, problem-solving, and analytical skills while working on projects, research, and collaborative learning experiences.
+            <br /><br />
+            Beyond coursework, my education has encouraged me to explore emerging technologies such as machine learning, artificial intelligence, data visualization, and automation. 
+            These experiences have strengthened my ability to transform theoretical concepts into practical solutions and prepared me to tackle real-world challenges with confidence.
+            <br /><br />
+            Below are the key milestones that have shaped my academic and professional development:
           </p>
         </div>
 

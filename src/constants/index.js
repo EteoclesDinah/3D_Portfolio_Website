@@ -355,7 +355,12 @@ export const educations = [
         icon: EEC,
         iconBg: "#accbe1",
         date: '2020 A.D. - 2026 A.D.',
-        points: [],
+        points: [
+            "Built multiple academic and personal projects using React, Python, JavaScript, and SQL.",
+            "Gained practical experience in data visualization, predictive modeling, and automation.",
+            "Focused on software engineering, machine learning, artificial intelligence, and data analytics.",   
+            "Continuously expanding knowledge through research, certifications, and independent projects.",
+        ],
     },
 
     {
@@ -366,7 +371,12 @@ export const educations = [
         icon: dav,
         iconBg: "#fbc3bc",
         date: '2017 A.D.- 2019 A.D.',
-        points: [],
+        points: [
+            "Completed higher secondary education with a major in Biology.",
+            "Built a strong foundation in mathematics, physics, chemistry, and biology.",
+            "Developed analytical thinking and scientific reasoning through laboratory experiments.",
+            "Participated in academic and extracurricular activities that strengthened teamwork and communication.",
+        ],
     },
 
     {
@@ -377,6 +387,11 @@ export const educations = [
         icon: nspes,
         iconBg: "#EDDEA4",
         date: '',
-        points: [],
+        points: [
+            "Graduated with distinction, achieving a GPA of 3.80 out of 4.0.",
+            "Established a strong academic foundation across mathematics, science, and computer studies.",
+            "Actively participated in school events and extracurricular activities.",
+            "Developed discipline, leadership, and problem-solving skills during school years.",
+        ],
     },
 ];
