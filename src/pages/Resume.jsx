@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 import Kamala_Rai_Resume from "../assets/files/Kamala_Rai_Resume.pdf";
-import { certifications, educations, experiences, publications, workExperiences } from "../constants";
+import { certifications, educations, publications, workExperiences } from "../constants";
 import CTA from "../components/CTA";
 
 const MotionDiv = motion.div;
@@ -51,9 +51,9 @@ const Resume = () => {
         </div>
 
         <div className='mt-5 flex flex-col gap-12'>
-          {publications.map((publication, index) => (
+          {publications.map((publication) => (
             <div className="w-full" key={publication.conference_name}>
-              <div className={`block-container flex flex-col items-center gap-8 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div className="block-container flex flex-col items-center gap-8 md:flex-row md:gap-12">
 
                 <div className='mt-5 flex flex-1 flex-col'>
                   <h4 className='text-2xl font-semibold font-poppins'>
@@ -111,9 +111,9 @@ const Resume = () => {
         </div>
 
         <div className='mt-5 flex flex-col gap-12'>
-          {workExperiences.map((experience, index) => (
+          {workExperiences.map((experience) => (
             <div className="w-full" key={experience.title}>
-              <div className={`block-container flex flex-col items-center gap-8 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div className="block-container flex flex-col items-center gap-8 md:flex-row-reverse md:gap-12">
 
                 <div className='mt-5 flex flex-1 flex-col'>
                   <h4 className='text-2xl font-semibold font-poppins'>
@@ -165,9 +165,9 @@ const Resume = () => {
         </div>
 
         <div className='mt-5 flex flex-col gap-12'>
-          {certifications.map((certificate, index) => (
+          {certifications.map((certificate) => (
             <div className="w-full" key={certificate.title}>
-              <div className={`block-container flex flex-col items-center gap-8 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div className="block-container flex flex-col items-center gap-8 md:flex-row md:gap-12">
 
                 <div className='mt-5 flex flex-1 flex-col'>
                   <h4 className='text-2xl font-semibold font-poppins'>
