@@ -170,8 +170,9 @@ export const publications = [
         title: 'A Classification Analysis-based Approach to Internet Adoption in Nepal.',
         conference_name: '2025 3rd International Conference on Intelligent Systems, Advanced Computing and Communication (ISACC)',
         icon: documentation,
+        imageUrl: isacc,
         iconBg: "#7bbcf0",
-        date: "February 2025",
+        date: "February 28, 2025",
         doi: "10.1109/ISACC65211.2025.10969200",
         doi_link: "https://doi.org/10.1109/ISACC65211.2025.10969200", 
         points: [
@@ -181,6 +182,7 @@ export const publications = [
             "Key Finding: ICT use is still a mostly urban phenomenon, with mobile phones being the de facto medium of internet use.",
             "Presented at ISACC 2025, an international IEEE conference.",
         ],
+        description: 'Presented the research paper "A Classification Analysis-based Approach to Internet Adoption in Nepal" at ISACC 2025, an IEEE international conference. The paper was subsequently published in IEEE Xplore. Applied machine learning techniques including XGBoost, SMOTE, permutation testing, and partial dependence analysis to identify factors influencing Internet adoption in Nepal using the NDHS 2022 dataset.'
     },
 ];
 

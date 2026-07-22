@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 import Kamala_Rai_Resume from "../assets/files/Kamala_Rai_Resume.pdf";
-import { certifications, educations } from "../constants";
+import { certifications, educations, publications } from "../constants";
 import CTA from "../components/CTA";
 
 const MotionDiv = motion.div;
@@ -36,6 +36,67 @@ const Resume = () => {
           <span className="ml-3 h-2 w-2 bg-slate-950 transition-transform group-hover:translate-x-1" />
         </a>
       </MotionDiv>
+
+      <hr className='border-slate-200 mt-10'/>
+
+      <div className="py-16">
+        <h3 className="subhead-text">Publications</h3>
+
+        <div className="mt-5 flex flex-col gap-3 text-slate-500">
+          <p>
+            Beyond my technical projects, I have also contributed to academic research and shared my findings with the wider community. 
+            My work has been published at recognized international conference, IEEE Xplore.
+            <br /><br />
+          </p>
+        </div>
+
+        <div className='mt-5 flex flex-col gap-12'>
+          {publications.map((publication, index) => (
+            <div className="w-full" key={publication.conference_name}>
+              <div className={`block-container flex flex-col items-center gap-8 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+
+                <div className='mt-5 flex flex-1 flex-col'>
+                  <h4 className='text-2xl font-semibold font-poppins'>
+                    {publication.conference_name}
+                  </h4>
+
+                  <p className='text-black-500 font-medium font-base' style={{margin:0}}>
+                    <a
+                      href={publication.doi_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-blue-800"
+                    >
+                      {publication.doi}
+                    </a>
+                  </p>
+
+                  <p className='text-black-400 font-medium font-base' style={{margin:0}}>
+                    {publication.date}
+                  </p>
+
+                  <div className='mt-2 flex flex-col gap-3 text-slate-500'>
+                    <p>
+                      {publication.description}
+                    </p>
+                  </div>
+
+                </div>
+
+                <div className='flex flex-1 justify-center items-center mt-5 mb-5'>
+                  <img
+                  src={publication.imageUrl}
+                  alt={publication.title}
+                  className='w-full max-w-md object-contain'
+                  />
+                </div>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
+      </div>
 
       <hr className='border-slate-200 mt-10'/>
 
