@@ -9,6 +9,8 @@ import data_analytics from './data_analytics.png'
 import EEC from './EEC.jpg'
 import dav from './dav.png'
 import nspes from './nspes.jpg'
+import isacc from './isacc.png'
+import data_engineering_internship from './data_engineering_internship.jpg'
 
 export {
     hero,
@@ -21,5 +23,7 @@ export {
     data_analytics,
     EEC,
     dav,
-    nspes
+    nspes,
+    data_engineering_internship,
+    isacc
 }
