@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 import Kamala_Rai_Resume from "../assets/files/Kamala_Rai_Resume.pdf";
-import { certifications, educations, publications } from "../constants";
+import { certifications, educations, experiences, publications, workExperiences } from "../constants";
 import CTA from "../components/CTA";
 
 const MotionDiv = motion.div;
@@ -45,7 +45,7 @@ const Resume = () => {
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
             Beyond my technical projects, I have also contributed to academic research and shared my findings with the wider community. 
-            My work has been published at recognized international conference, IEEE Xplore.
+            My research has been presented at an international IEEE conference and published in IEEE Xplore, contributing to the broader research community.
             <br /><br />
           </p>
         </div>
@@ -99,6 +99,58 @@ const Resume = () => {
       </div>
 
       <hr className='border-slate-200 mt-10'/>
+
+      <div className="py-16">
+        <h3 className="subhead-text">Experiences</h3>
+
+        <div className="mt-5 flex flex-col gap-3 text-slate-500">
+          <p>
+            My professional journey involves working in dynamic team environments, applying technical knowledge to solve real-world challenges. This experience allowed me to collaborate with industry professionals, strengthen my technical skills, and gain valuable insights into workflows and best practices.
+            <br /><br />Here's the rundown:
+          </p>
+        </div>
+
+        <div className='mt-5 flex flex-col gap-12'>
+          {workExperiences.map((experience, index) => (
+            <div className="w-full" key={experience.title}>
+              <div className={`block-container flex flex-col items-center gap-8 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+
+                <div className='mt-5 flex flex-1 flex-col'>
+                  <h4 className='text-2xl font-semibold font-poppins'>
+                    {experience.title}
+                  </h4>
+
+                  <p className='text-black-500 font-medium font-base' style={{margin:0}}>
+                    {experience.company_name}
+                  </p>
+
+                  <p className='text-black-400 font-medium font-base' style={{margin:0}}>
+                    {experience.date}
+                  </p>
+                  <div className='mt-2 flex flex-col gap-3 text-slate-500'>
+                    <p>
+                      {experience.description}
+                    </p>
+                  </div>
+                  
+
+                </div>
+
+                <div className='flex flex-1 justify-center items-center mt-5 mb-5'>
+                  <img
+                    src={experience.imageUrl}
+                    alt={experience.title}
+                    className='w-full max-w-md object-contain'
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+      <hr className='border-slate-200'/>
 
       <div className="py-16">
         <h3 className="subhead-text">Certifications</h3>

@@ -330,6 +330,17 @@ export const projects = [
     },
 ];
 
+export const workExperiences = [
+    {
+        title: 'Data Engineering Internship',
+        imageUrl: data_engineering_internship,
+        theme: 'btn-back-green',
+        company_name: 'GrowByData',
+        date: 'September 1, 2025 - November 30, 2025',
+        description: 'Completed a 3-month Data Engineering internship at GrowByData, focused on learning modern data engineering concepts, including ETL processes, SQL, Python, data warehousing, and data pipeline development. Strengthened problem-solving and analytical skills through hands-on tasks and real-world projects, and gained practical experience in data cleaning, workflow automation, and optimizing data pipelines.'
+    },
+];
+
 export const certifications = [
     {
         title: 'Data Analytics and Power BI Workshop',
@@ -338,15 +349,6 @@ export const certifications = [
         company_name: 'Vrit Jobs',
         date: 'February 2026',
         description: 'Completed a 2-day hands-on workshop focused on data analytics and business intelligence using Microsoft Power BI. Learned the fundamentals of data cleaning, transformation, visualization, and dashboard creation to support data-driven decision-making.',
-    },
-
-    {
-        title: 'Data Engineering Internship',
-        imageUrl: data_engineering_internship,
-        theme: 'btn-back-green',
-        company_name: 'GrowByData',
-        date: 'September 1, 2025 - November 30, 2025',
-        description: 'Completed a 3-month Data Engineering internship at GrowByData, focused on learning modern data engineering concepts, including ETL processes, SQL, Python, data warehousing, and data pipeline development. Strengthened problem-solving and analytical skills through hands-on tasks and real-world projects, and gained practical experience in data cleaning, workflow automation, and optimizing data pipelines.'
     },
 
     {
