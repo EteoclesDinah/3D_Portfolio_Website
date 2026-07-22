@@ -101,12 +101,12 @@ const Resume = () => {
       <hr className='border-slate-200 mt-10'/>
 
       <div className="py-16">
-        <h3 className="subhead-text">Experiences</h3>
+        <h3 className="subhead-text">Experience</h3>
 
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
             My professional journey involves working in dynamic team environments, applying technical knowledge to solve real-world challenges. This experience allowed me to collaborate with industry professionals, strengthen my technical skills, and gain valuable insights into workflows and best practices.
-            <br /><br />Here's the rundown:
+            <br /><br />Below is an overview of my professional experience and the skills I developed along the way:
           </p>
         </div>
 
@@ -157,9 +157,8 @@ const Resume = () => {
 
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
-            Beyond my academic research and technical projects, I have actively pursued professional certifications to deepen my understanding of modern data science, 
-            machine learning, cloud technologies, and software development practices. These certifications complement my formal education by providing hands-on exposure 
-            to industry tools, real-world workflows, and best practices. They reflect my commitment to continuous learning, professional growth, and staying current with rapidly evolving technologies.
+            Alongside my academic journey, I have completed workshops and professional training programs to strengthen my technical skills. 
+            These experiences provided hands-on exposure to data analytics, business intelligence, cybersecurity, and industry best practices while reinforcing my commitment to continuous learning.
             <br /><br />Explore the certifications that have contributed to my professional journey:
           </p>
         </div>
