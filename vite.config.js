@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
 
   //for loading assets
-  base: './',    
+  base: '/3D_Portfolio_Website/',    
   
   plugins: [
     react(),
