@@ -11,6 +11,7 @@ import dav from './dav.png'
 import nspes from './nspes.jpg'
 import isacc from './isacc.png'
 import data_engineering_internship from './data_engineering_internship.jpg'
+import n8n from './n8n.png'
 
 export {
     hero,
@@ -25,5 +26,6 @@ export {
     dav,
     nspes,
     data_engineering_internship,
-    isacc
+    isacc,
+    n8n
 }

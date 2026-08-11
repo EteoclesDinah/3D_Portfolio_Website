@@ -6,6 +6,7 @@ import {
     EEC, 
     isacc,
     meta, 
+    n8n,
     nspes, 
     shopify, 
     starbucks, 
@@ -342,6 +343,15 @@ export const workExperiences = [
 ];
 
 export const certifications = [
+    {
+        title: 'AI Automation using n8n',
+        imageUrl: n8n,
+        theme: 'btn-back-red',
+        company_name: 'Verve Innovation',
+        date: '8 August 2026',
+        description: 'Participated in a webinar on AI Automation using n8n, gaining practical insights into workflow automation and the integration of AI-powered processes using n8n.',
+    },
+
     {
         title: 'Data Analytics and Power BI Workshop',
         imageUrl: data_analytics,
